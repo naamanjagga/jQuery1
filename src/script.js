@@ -10,7 +10,7 @@ $(document).ready(function() {
 	
 
 	$('#add_product').on('click', function() {
-		$('.success').show();
+		
 		
 		var Id = document.getElementById('product_sku').value;
 		var Name = document.getElementById('product_name').value;
@@ -101,6 +101,8 @@ $(document).ready(function() {
 
 			return false;
 		} else {
+			$('#update_product').hide();
+			$('.success').show();
 			$('#para3').hide();
 			$('#para5').hide();
 			$('#para6').hide();
@@ -224,6 +226,7 @@ $('#update_product').on('click', function() {
 
 		return false;
 	} else {
+		$('#update_product').hide();
 		$('#add_product').show();
 		$('#product_sku').css('border-width', '1px');
 			$('#product_sku').css('border-color', 'black');
